@@ -2,7 +2,7 @@
 
 A small, **read-only Windows network monitor** that identifies unusual *active TCP connection patterns* using a three-model machine-learning ensemble. Only processes flagged by **at least two models** pass to a forward-chaining rule engine, which produces a plain-English explanation. Findings appear in the terminal and in `output_network_findings.csv`.
 
-The full application is **199 lines of Python**, including comments and blank lines. It does **not** use reinforcement learning, inspect packet contents, block connections, or claim to identify malware conclusively.
+Note: This is an initial exploratory script and it does **not** claim to fully inspect packet contents, block connections, or claim to identify malware conclusively.
 
 ## Requirements
 
@@ -15,14 +15,8 @@ The full application is **199 lines of Python**, including comments and blank li
 In **Command Prompt** (CMD):
 
 ```cmd
-cd C:\Users\sam_a\Desktop\CyberAI
-python -m pip install psutil numpy scikit-learn
 python live_network_threat_monitor.py
 ```
-
-The pip package is named **`scikit-learn`**, although its Python import is `sklearn`.
-
-No command-line flags or CyberBattleSim installation are needed. Adjust configuration constants at the top of `live_network_threat_monitor.py` instead.
 
 ## Configuration
 
